@@ -127,7 +127,7 @@ public class Mavenproject4 extends JFrame {
     private void addData(){
         try{
             String query = String.format(
-                "mutation { addData(visitTime: \"%s\", studentId: \"%s\", studentName: %s, studyProgram: \"%s\", purpose: %s) { id studentId } }",
+                "mutation { addData( studentId: \"%s\", studentName: %s, studyProgram: \"%s\", purpose: %s) { id studentId, visitTime: \"%s\"} }",
                 nimField.getText(), nameField.getText(), studyProgramBox.getSelectedItem(), purposeBox.getSelectedItem()
             );
             sendGraphQLRequest(new GraphQLQuery(query));
