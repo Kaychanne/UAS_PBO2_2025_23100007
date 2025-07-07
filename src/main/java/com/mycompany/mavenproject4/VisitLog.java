@@ -12,14 +12,14 @@ package com.mycompany.mavenproject4;
 import java.time.LocalDateTime;
 
 public class VisitLog {
-    private int id;
+    private Long id;
     private String studentName;
     private String studentId;
     private String studyProgram;
     private String purpose;
     private LocalDateTime visitTime;
 
-    public VisitLog(int id, String studentName, String studentId, String studyProgram, String purpose, LocalDateTime visitTime) {
+    public VisitLog(Long id, String studentId, String studentName, String studyProgram, String purpose, LocalDateTime visitTime) {
         this.id = id;
         this.studentId = studentId;
         this.studentName = studentName;
@@ -28,8 +28,8 @@ public class VisitLog {
         this.visitTime = visitTime;
     }
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
     public String getStudentName() { return studentName; }
     public void setStudentName(String studentName) { this.studentName = studentName; }
